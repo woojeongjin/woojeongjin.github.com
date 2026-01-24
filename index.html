@@ -19,8 +19,15 @@
     <!-- favicon -->
     <link href="img/WJ.jpg" rel="icon" type="image/jpeg">
 
+    <!-- Preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://arxiv.org">
+    <link rel="dns-prefetch" href="https://github.com">
+
     <!-- web-fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700&display=swap" rel="stylesheet">
 
     <!-- font-awesome -->
     <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -42,6 +49,12 @@
     <![endif]-->
 </head>
 <body>
+<!-- Skip to main content (Accessibility) -->
+<a href="#about" class="skip-link">Skip to main content</a>
+
+<!-- Scroll Progress Bar -->
+<div class="scroll-progress"></div>
+
 <div id="main-wrapper">
 <!-- Page Preloader -->
 <div id="preloader">
@@ -69,6 +82,12 @@
                 <li><a href="#education">Education</a></li>
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="./cv_woojeong.pdf" target="_blank">CV</a></li>
+                <li>
+                    <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                        <i class="fa fa-sun-o icon-sun"></i>
+                        <i class="fa fa-moon-o icon-moon"></i>
+                    </button>
+                </li>
             </ul>
         </div>
     </div>
@@ -111,36 +130,38 @@
 </header>
 <!-- .header-->
 
-<section class="section-wrapper section-experience" id="experience">
+<section class="section-wrapper section-experience fade-in-section" id="experience">
     <div class="container">
         <div class="row">
             <div class="col-md-3">
                 <div class="section-title"><h2>Experience</h2></div>
             </div>
             <div class="col-md-9">
-                <div class="content-item">
-                    <small>June 2024 - Present</small>
-                    <h3>Applied Scientist, <a href="https://www.hippocraticai.com">Hippocratic AI</a>, Palo Alto, California</h3>
-                </div>
-                <div class="content-item">
-                    <small>Jan. 2022 - Apr. 2022</small>
-                    <h3>Research Intern, <a href="https://www.microsoft.com/en-us/research/">Microsoft Research</a>, Redmond, Washington</h3>
-                </div>
-                <div class="content-item">
-                    <small>June 2021 - Jan. 2022</small>
-                    <h3>Research Intern, <a href="https://azure.microsoft.com/en-us/overview/ai-platform/#overview">Microsoft Azure AI</a>, Redmond, Washington</h3>
-                </div>
-                <div class="content-item">
-                    <small>May 2020 - Aug. 2020</small>
-                    <h3>Research Intern, <a href="https://ai.meta.com">Meta AI</a>, Menlo Park, California</h3>
-                </div>
-                <div class="content-item">
-                    <small>Jan. 2016 - Apr. 2018</small>
-                    <h3>Research Assistant, <a href="https://datalab.snu.ac.kr/">Data Mining Lab.</a>, SNU</h3>
-                </div>
-                <div class="content-item">
-                    <small>June 2014 - Aug. 2014</small>
-                    <h3>Research Intern, Creative Innovation Center, LG Electronics</h3>
+                <div class="timeline">
+                    <div class="content-item">
+                        <small>June 2024 - Present</small>
+                        <h3>Applied Scientist, <a href="https://www.hippocraticai.com">Hippocratic AI</a>, Palo Alto, California</h3>
+                    </div>
+                    <div class="content-item">
+                        <small>Jan. 2022 - Apr. 2022</small>
+                        <h3>Research Intern, <a href="https://www.microsoft.com/en-us/research/">Microsoft Research</a>, Redmond, Washington</h3>
+                    </div>
+                    <div class="content-item">
+                        <small>June 2021 - Jan. 2022</small>
+                        <h3>Research Intern, <a href="https://azure.microsoft.com/en-us/overview/ai-platform/#overview">Microsoft Azure AI</a>, Redmond, Washington</h3>
+                    </div>
+                    <div class="content-item">
+                        <small>May 2020 - Aug. 2020</small>
+                        <h3>Research Intern, <a href="https://ai.meta.com">Meta AI</a>, Menlo Park, California</h3>
+                    </div>
+                    <div class="content-item">
+                        <small>Jan. 2016 - Apr. 2018</small>
+                        <h3>Research Assistant, <a href="https://datalab.snu.ac.kr/">Data Mining Lab.</a>, Seoul National University</h3>
+                    </div>
+                    <div class="content-item">
+                        <small>June 2014 - Aug. 2014</small>
+                        <h3>Research Intern, Creative Innovation Center, LG Electronics</h3>
+                    </div>
                 </div>
             </div>
         </div>
@@ -148,7 +169,7 @@
 </section>
 <!-- .section-experience -->
 
-<section class="section-education section-wrapper" id="education">
+<section class="section-education section-wrapper fade-in-section" id="education">
     <div class="container">
         <div class="row">
             <div class="col-md-3">
@@ -158,35 +179,20 @@
             </div>
 
             <div class="col-md-9">
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="content-item">
-                            <small>Aug. 2018 - May. 2024</small>
-                            <h3>Ph.D. in Computer Science</h3>
-                            <h4>University of Southern California</h4>
-                            <p>Los Angeles, California</p>
-                        </div>
-                        <!-- .experience-item -->
-                        <!-- .experience-item -->
+                <div class="timeline">
+                    <div class="content-item">
+                        <small>Aug. 2018 - May. 2024</small>
+                        <h3>Ph.D. in Computer Science</h3>
+                        <h4>University of Southern California</h4>
+                        <p>Los Angeles, California</p>
+                    </div>
+                    <div class="content-item">
+                        <small>Feb. 2017</small>
+                        <h3>B.S. in Electrical and Computer Engineering</h3>
+                        <h4>Seoul National University</h4>
+                        <p>Seoul, Korea</p>
                     </div>
                 </div>
-
-
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="content-item">
-                            <small>Feb. 2017</small>
-                            <h3>B.S. in Electrical and Computer Engineering</h3>
-                            <h4>Seoul National University</h4>
-                            Seoul, Korea
-                        </div>
-                        <!-- .experience-item -->
-                        <!-- .experience-item -->
-                    </div>
-                </div>
-                <!--.row-->
             </div>
 
         </div>
@@ -198,7 +204,7 @@
 
 
 
-<section class="section-pub section-wrapper" id="publications">
+<section class="section-pub section-wrapper fade-in-section" id="publications">
     <div class="container">
         <div class="row">
             <div class="col-md-3">
@@ -209,192 +215,242 @@
             <div class="col-md-9">
                 <div class="features">
                     <div class="year-divider">2024</div>
-                    <article >
+                    <article>
                         <div class="inner">
-                            <strong>WinoViz: Probing Visual Properties of Objects Under Different States</strong><br>
+                            <strong>WinoViz: Probing Visual Properties of Objects Under Different States</strong>
                             <em2>Woojeong Jin</em2>, Tejas Srinivasan, Jesse Thomason, and Xiang Ren<br>
-                            arXiv preprint
-                            [ <a href="https://arxiv.org/abs/2402.13584">paper</a> ]
+                            <a href="https://arxiv.org" class="venue-badge venue-arxiv" target="_blank">arXiv</a>
+                            <div class="pub-links">
+                                <a href="https://arxiv.org/abs/2402.13584" target="_blank"><i class="fa fa-file-text-o"></i> Paper</a>
+                            </div>
                         </div>
                     </article>
 
                     <div class="year-divider">2023</div>
-                    <article >
+                    <article>
                         <div class="inner">
-                            <strong>GRILL: Grounded Vision-language Pre-training via Aligning Text and Image Regions</strong><br>
+                            <strong>GRILL: Grounded Vision-language Pre-training via Aligning Text and Image Regions</strong>
                             <em2>Woojeong Jin</em2>, Subhabrata Mukherjee, Yu Cheng, Yelong Shen, Weizhu Chen, Ahmed Hassan Awadallah, Damien Jose, and Xiang Ren<br>
-                            arXiv preprint
-                            [ <a href="https://arxiv.org/abs/2305.14676">paper</a> ]
+                            <a href="https://arxiv.org" class="venue-badge venue-arxiv" target="_blank">arXiv</a>
+                            <div class="pub-links">
+                                <a href="https://arxiv.org/abs/2305.14676" target="_blank"><i class="fa fa-file-text-o"></i> Paper</a>
+                            </div>
                         </div>
                     </article>
 
                     <article>
                         <div class="inner">
-                            <strong>Temporal Knowledge Graph Forecasting Without Knowledge Using In-Context Learning</strong><br>
+                            <strong>Temporal Knowledge Graph Forecasting Without Knowledge Using In-Context Learning</strong>
                             Dong-Ho Lee, Kian Ahrabian, <em2>Woojeong Jin</em2>, Fred Morstatter, and Jay Pujara<br>
-                            <a href="https://2023.emnlp.org">EMNLP 2023</a>
-                            [ <a href="https://arxiv.org/abs/2305.10613">paper</a> ]
+                            <a href="https://2023.emnlp.org" class="venue-badge venue-emnlp">EMNLP 2023</a>
+                            <div class="pub-links">
+                                <a href="https://arxiv.org/abs/2305.10613" target="_blank"><i class="fa fa-file-text-o"></i> Paper</a>
+                            </div>
                         </div>
                     </article>
 
                     <article>
                         <div class="inner">
-                            <strong>Analyzing Norm Violations in Real-Time Live-Streaming Chat</strong><br>
+                            <strong>Analyzing Norm Violations in Real-Time Live-Streaming Chat</strong>
                             Jihyung Moon*, Dong-Ho Lee*, Hyundong J. Cho, <em2>Woojeong Jin</em2>, Chan Young Park, Minwoo Kim, Jay Pujara and Sungjoon Park<br>
-                            <a href="https://2023.emnlp.org">EMNLP 2023</a>
-                            [ <a href="https://arxiv.org/abs/2305.10731">paper</a> ]
+                            <a href="https://2023.emnlp.org" class="venue-badge venue-emnlp">EMNLP 2023</a>
+                            <div class="pub-links">
+                                <a href="https://arxiv.org/abs/2305.10731" target="_blank"><i class="fa fa-file-text-o"></i> Paper</a>
+                            </div>
                         </div>
                     </article>
 
                     <article>
                         <div class="inner">
-                            <strong>Hybrid forecasting of geopolitical events</strong><br>
+                            <strong>Hybrid forecasting of geopolitical events</strong>
                             Daniel M Benjamin, Fred Morstatter, Ali E Abbas, Andres Abeliuk, Pavel Atanasov, Stephen Bennett, Andreas Beger, Saurabh Birari, David V Budescu, Michele Catasta, Emilio Ferrara, Lucas Haravitch, Mark Himmelstein, KSM Tozammel Hossain, Yuzhong Huang, <em2>Woojeong Jin</em2>, Regina Joseph, Jure Leskovec, Akira Matsui, Mehrnoosh Mirtaheri, Xiang Ren, Gleb Satyukov, Rajiv Sethi, Amandeep Singh, Rok Sosic, Mark Steyvers, Pedro A Szekely, Michael D Ward, and Aram Galstyan<br>
-                            <a href="https://aaai.org/ai-magazine/">AI Magazine</a> 
-                            [ <a href="https://onlinelibrary.wiley.com/doi/pdf/10.1002/aaai.12085">paper</a> ]
+                            <a href="https://aaai.org/ai-magazine/" class="venue-badge venue-journal" target="_blank">AI Magazine</a>
+                            <div class="pub-links">
+                                <a href="https://onlinelibrary.wiley.com/doi/pdf/10.1002/aaai.12085" target="_blank"><i class="fa fa-file-text-o"></i> Paper</a>
+                            </div>
                         </div>
                     </article>
-
 
                     <div class="year-divider">2022</div>
-                    <article >
+                    <article>
                         <div class="inner">
-                            <strong>A Good Prompt Is Worth Millions of Parameters: Low-resource Prompt-based Learning for Vision-Language Models</strong><br>
-                            <em2>Woojeong Jin</em2>, Yu Cheng, Yelong Shen, Weizhu Chen, and  Xiang Ren<br>
-                            <a href="https://www.2022.aclweb.org">ACL 2022</a> (long)
-                            [ <a href="https://arxiv.org/abs/2110.08484">paper</a> | <a href="https://github.com/woojeongjin/FewVLM">code</a> ]
+                            <strong>A Good Prompt Is Worth Millions of Parameters: Low-resource Prompt-based Learning for Vision-Language Models</strong>
+                            <em2>Woojeong Jin</em2>, Yu Cheng, Yelong Shen, Weizhu Chen, and Xiang Ren<br>
+                            <a href="https://www.2022.aclweb.org" class="venue-badge venue-acl">ACL 2022</a>
+                            <div class="pub-links">
+                                <a href="https://arxiv.org/abs/2110.08484" target="_blank"><i class="fa fa-file-text-o"></i> Paper</a>
+                                <a href="https://github.com/woojeongjin/FewVLM" target="_blank"><i class="fa fa-github"></i> Code</a>
+                            </div>
                         </div>
                     </article>
 
-                    <article >
+                    <article>
                         <div class="inner">
-                            <strong>Leveraging Visual Knowledge in Language Tasks: An Empirical Study on Intermediate Pre-training for Cross-Modal Knowledge Transfer</strong><br>
-                            <em2>Woojeong Jin</em2>*, Dong-Ho Lee*, Chenguang Zhu, Jay Pujara, and  Xiang Ren<br>
-                            <a href="https://www.2022.aclweb.org">ACL 2022</a> (long)
-                            [ <a href="https://arxiv.org/abs/2203.07519">paper</a> | <a href="https://github.com/INK-USC/CMKT">code</a> ]
+                            <strong>Leveraging Visual Knowledge in Language Tasks: An Empirical Study on Intermediate Pre-training for Cross-Modal Knowledge Transfer</strong>
+                            <em2>Woojeong Jin</em2>*, Dong-Ho Lee*, Chenguang Zhu, Jay Pujara, and Xiang Ren<br>
+                            <a href="https://www.2022.aclweb.org" class="venue-badge venue-acl">ACL 2022</a>
+                            <div class="pub-links">
+                                <a href="https://arxiv.org/abs/2203.07519" target="_blank"><i class="fa fa-file-text-o"></i> Paper</a>
+                                <a href="https://github.com/INK-USC/CMKT" target="_blank"><i class="fa fa-github"></i> Code</a>
+                            </div>
                         </div>
                     </article>
 
                     <div class="year-divider">2021</div>
-                    <article >
+                    <article>
                         <div class="inner">
-                            <strong>MSD: Saliency-aware Knowledge Distillation for Multimodal Understanding</strong><br>
+                            <strong>MSD: Saliency-aware Knowledge Distillation for Multimodal Understanding</strong>
                             <em2>Woojeong Jin</em2>, Maziar Sanjabi, Shaoliang Nie, Liang Tan, Xiang Ren, and Hamed Firooz<br>
-                            <a href="https://2021.emnlp.org">EMNLP 2021 Findings</a> (long)
-                            [ <a href="https://aclanthology.org/2021.findings-emnlp.302/">paper</a> ]
+                            <a href="https://2021.emnlp.org" class="venue-badge venue-emnlp">EMNLP 2021</a>
+                            <div class="pub-links">
+                                <a href="https://aclanthology.org/2021.findings-emnlp.302/" target="_blank"><i class="fa fa-file-text-o"></i> Paper</a>
+                            </div>
                         </div>
                     </article>
 
-                    <article >
+                    <article>
                         <div class="inner">
-                            <strong>ForecastQA: A Question Answering Challenge for Event Forecasting with Temporal Text Data</strong><br>
+                            <strong>ForecastQA: A Question Answering Challenge for Event Forecasting with Temporal Text Data</strong>
                             <em2>Woojeong Jin</em2>, Rahul Khanna, Suji Kim, Dong-Ho Lee, Fred Morstatter, Aram Galstyan, and Xiang Ren<br>
-                            <a href="https://2021.aclweb.org">ACL 2021</a> (long)
-                            [ <a href="https://arxiv.org/abs/2005.00792">paper</a> | <a href="https://inklab.usc.edu/ForecastQA/index.html">www</a> | <a href="https://eval.ai/web/challenges/challenge-page/904/leaderboard/2377">leaderboard</a> ]
+                            <a href="https://2021.aclweb.org" class="venue-badge venue-acl">ACL 2021</a>
+                            <div class="pub-links">
+                                <a href="https://arxiv.org/abs/2005.00792" target="_blank"><i class="fa fa-file-text-o"></i> Paper</a>
+                                <a href="https://inklab.usc.edu/ForecastQA/index.html" target="_blank"><i class="fa fa-globe"></i> Website</a>
+                                <a href="https://eval.ai/web/challenges/challenge-page/904/leaderboard/2377" target="_blank"><i class="fa fa-trophy"></i> Leaderboard</a>
+                            </div>
                         </div>
                     </article>
 
-                    <article >
+                    <article>
                         <div class="inner">
-                            <strong>Modality-specific Distillation</strong><br>
+                            <strong>Modality-specific Distillation</strong>
                             <em2>Woojeong Jin</em2>, Maziar Sanjabi, Shaoliang Nie, Liang Tan, Xiang Ren, and Hamed Firooz<br>
-                            <a href="http://multicomp.cs.cmu.edu/naacl2021multimodalworkshop/">MAI@NAACL 2021</a>
-                            [ <a href="https://arxiv.org/pdf/2101.01881v1.pdf">paper</a> ]
+                            <a href="http://multicomp.cs.cmu.edu/naacl2021multimodalworkshop/" class="venue-badge venue-acl" target="_blank">NAACL 2021</a>
+                            <div class="pub-links">
+                                <a href="https://arxiv.org/pdf/2101.01881v1.pdf" target="_blank"><i class="fa fa-file-text-o"></i> Paper</a>
+                            </div>
                         </div>
                     </article>
 
                     <div class="year-divider">2020</div>
-                    <article >
+                    <article>
                         <div class="inner">
-                            <strong>Recurrent Event Network: Autoregressive Structure Inference over Temporal Knowledge Graphs</strong><br>
+                            <strong>Recurrent Event Network: Autoregressive Structure Inference over Temporal Knowledge Graphs</strong>
                             <em2>Woojeong Jin</em2>, Meng Qu, Xisen Jin, and Xiang Ren<br>
-                            <a href="https://2020.emnlp.org">EMNLP 2020</a> (long)
-                            [ <a href="https://arxiv.org/abs/1904.05530">paper</a> | <a href="https://github.com/INK-USC/RE-Net">code</a> ]
+                            <a href="https://2020.emnlp.org" class="venue-badge venue-emnlp">EMNLP 2020</a>
+                            <div class="pub-links">
+                                <a href="https://arxiv.org/abs/1904.05530" target="_blank"><i class="fa fa-file-text-o"></i> Paper</a>
+                                <a href="https://github.com/INK-USC/RE-Net" target="_blank"><i class="fa fa-github"></i> Code</a>
+                            </div>
                         </div>
                     </article>
 
                     <article>
                         <div class="inner">
-                            <strong>Accurate Relational Reasoning in Edge-labeled Graphs by Multi-Labeled Random Walk with Restart</strong><br>
+                            <strong>Accurate Relational Reasoning in Edge-labeled Graphs by Multi-Labeled Random Walk with Restart</strong>
                             Jinhong Jung, <em2>Woojeong Jin</em2>, Ha-myung Park, and U Kang<br>
-                            <a href="https://www.springer.com/journal/11280">World Wide Web Journal</a>
-                            [ <a href="https://link.springer.com/article/10.1007/s11280-020-00817-8">paper</a> ]
+                            <a href="https://www.springer.com/journal/11280" class="venue-badge venue-journal" target="_blank">WWW Journal</a>
+                            <div class="pub-links">
+                                <a href="https://link.springer.com/article/10.1007/s11280-020-00817-8" target="_blank"><i class="fa fa-file-text-o"></i> Paper</a>
+                            </div>
                         </div>
-                    </article>   
+                    </article>
 
                     <article>
                         <div class="inner">
-                            <strong>Temporal Attribute Prediction via Joint Modeling of Multi-Relational Structure Evolution</strong><br>
+                            <strong>Temporal Attribute Prediction via Joint Modeling of Multi-Relational Structure Evolution</strong>
                             Sankalp Garg*, Navodita Sharma*, <em2>Woojeong Jin</em2>, and Xiang Ren<br>
-                            <a href="https://ijcai20.org">IJCAI 2020</a>
-                            [ <a href="https://arxiv.org/abs/2003.03919">paper</a> | <a href="https://github.com/INK-USC/DArtNet">code</a> ]
+                            <a href="https://ijcai20.org" class="venue-badge">IJCAI 2020</a>
+                            <div class="pub-links">
+                                <a href="https://arxiv.org/abs/2003.03919" target="_blank"><i class="fa fa-file-text-o"></i> Paper</a>
+                                <a href="https://github.com/INK-USC/DArtNet" target="_blank"><i class="fa fa-github"></i> Code</a>
+                            </div>
                         </div>
-                    </article> 
+                    </article>
 
                     <div class="year-divider">2019</div>
                     <article>
                         <div class="inner">
-                            <strong>Collaborative Policy Learning for Open Knowledge Graph Reasoning</strong><br>
+                            <strong>Collaborative Policy Learning for Open Knowledge Graph Reasoning</strong>
                             Cong Fu, Tong Chen, Meng Qu, <em2>Woojeong Jin</em2>, and Xiang Ren<br>
-                            <a href="https://www.emnlp-ijcnlp2019.org">EMNLP 2019</a> (long) 
-                            [ <a href="https://arxiv.org/pdf/1909.00230.pdf">paper</a> | <a href="https://github.com/INK-USC/CPL">code</a> ]
+                            <a href="https://www.emnlp-ijcnlp2019.org" class="venue-badge venue-emnlp">EMNLP 2019</a>
+                            <div class="pub-links">
+                                <a href="https://arxiv.org/pdf/1909.00230.pdf" target="_blank"><i class="fa fa-file-text-o"></i> Paper</a>
+                                <a href="https://github.com/INK-USC/CPL" target="_blank"><i class="fa fa-github"></i> Code</a>
+                            </div>
                         </div>
-                    </article>   
+                    </article>
 
-                    <article >
+                    <article>
                         <div class="inner">
-                            <strong>Recurrent Event Network for Reasoning over Temporal Knowledge Graphs</strong><br>
+                            <strong>Recurrent Event Network for Reasoning over Temporal Knowledge Graphs</strong>
                             <em2>Woojeong Jin</em2>, Changlin Zhang, and Xiang Ren<br>
-                            <a href="https://rlgm.github.io">ICLR-RLGM 2019</a>
-                            [ <a href="papers/TKG_iclr19_workshop.pdf">paper</a> ]
+                            <a href="https://rlgm.github.io" class="venue-badge venue-neurips" target="_blank">ICLR 2019</a>
+                            <div class="pub-links">
+                                <a href="papers/TKG_iclr19_workshop.pdf" target="_blank"><i class="fa fa-file-text-o"></i> Paper</a>
+                            </div>
                         </div>
                     </article>
 
                     <article>
                         <div class="inner">
-                            <strong>Jointly Learning Explainable Rules for Recommendation with Knowledge Graph</strong><br>
+                            <strong>Jointly Learning Explainable Rules for Recommendation with Knowledge Graph</strong>
                             Weizhi Ma, Min Zhang, Yue Cao, <em2>Woojeong Jin</em2>, Chenyang Wang, Yiqun Liu, Shaoping Ma, and Xiang Ren<br>
-                            <a href="https://www2019.thewebconf.org">TheWebConf 2019</a>
-                            [ <a href="papers/RuleRec-2019.pdf">paper</a> | <a href="https://github.com/THUIR/RuleRec">code</a> ] <em3>(18% Acceptance Rate)</em3>
-                        </div>
-                    </article>
-
-                    <article >
-                        <div class="inner">
-                            <strong>Supervised and Extended Restart in Random Walks for Ranking and Link Prediction in Networks</strong><br>
-                            <em2>Woojeong Jin</em2>, Jinhong Jung, and U Kang<br>
-                            <a href="https://journals.plos.org/plosone/">PLOS ONE</a>
-                            [ <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0213857">paper</a> | <a href="https://datalab.snu.ac.kr/sure/">www (code and data)</a> ]
+                            <a href="https://www2019.thewebconf.org" class="venue-badge">WWW 2019</a> <em3>(18% Acceptance Rate)</em3>
+                            <div class="pub-links">
+                                <a href="papers/RuleRec-2019.pdf" target="_blank"><i class="fa fa-file-text-o"></i> Paper</a>
+                                <a href="https://github.com/THUIR/RuleRec" target="_blank"><i class="fa fa-github"></i> Code</a>
+                            </div>
                         </div>
                     </article>
 
                     <article>
                         <div class="inner">
-                            <strong>Random Walk Based Ranking in Signed Social Networks: Model and Algorithms</strong><br>
+                            <strong>Supervised and Extended Restart in Random Walks for Ranking and Link Prediction in Networks</strong>
+                            <em2>Woojeong Jin</em2>, Jinhong Jung, and U Kang<br>
+                            <a href="https://journals.plos.org/plosone/" class="venue-badge venue-journal" target="_blank">PLOS ONE</a>
+                            <div class="pub-links">
+                                <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0213857" target="_blank"><i class="fa fa-file-text-o"></i> Paper</a>
+                                <a href="https://datalab.snu.ac.kr/sure/" target="_blank"><i class="fa fa-globe"></i> Website</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article>
+                        <div class="inner">
+                            <strong>Random Walk Based Ranking in Signed Social Networks: Model and Algorithms</strong>
                             Jinhong Jung, <em2>Woojeong Jin</em2>, U Kang, and Lee Sael<br>
-                            <a href="http://kais.bigke.org/">KAIS</a>
-                            [ <a href="https://link.springer.com/article/10.1007/s10115-019-01364-z">paper</a> | <a href="https://datalab.snu.ac.kr/srwrpre/">www (code and data)</a> ]  
+                            <a href="http://kais.bigke.org/" class="venue-badge venue-journal" target="_blank">KAIS</a>
+                            <div class="pub-links">
+                                <a href="https://link.springer.com/article/10.1007/s10115-019-01364-z" target="_blank"><i class="fa fa-file-text-o"></i> Paper</a>
+                                <a href="https://datalab.snu.ac.kr/srwrpre/" target="_blank"><i class="fa fa-globe"></i> Website</a>
+                            </div>
                         </div>
                     </article>
 
                     <div class="year-divider">2018</div>
-                	<article>
+                    <article>
                         <div class="inner">
-                            <strong>Fast and Accurate Random Walk with Restart on Dynamic Graphs with Guarantees</strong><br>
+                            <strong>Fast and Accurate Random Walk with Restart on Dynamic Graphs with Guarantees</strong>
                             Minji Yoon, <em2>Woojeong Jin</em2>, and U Kang<br>
-                            <a href="https://www2018.thewebconf.org">TheWebConf 2018</a>
-                            [ <a href="papers/ospWWW18.pdf">paper</a> ] <em3>(14.8% Acceptance Rate)</em3>
+                            <a href="https://www2018.thewebconf.org" class="venue-badge">WWW 2018</a> <em3>(14.8% Acceptance Rate)</em3>
+                            <div class="pub-links">
+                                <a href="papers/ospWWW18.pdf" target="_blank"><i class="fa fa-file-text-o"></i> Paper</a>
+                            </div>
                         </div>
                     </article>
-
 
                     <div class="year-divider">2016</div>
                     <article>
                         <div class="inner">
-                            <strong>Personalized Ranking in Signed Networks using Signed Random Walk with Restart</strong><br>
+                            <strong>Personalized Ranking in Signed Networks using Signed Random Walk with Restart</strong>
                             Jinhong Jung, <em2>Woojeong Jin</em2>, Lee Sael, and U Kang<br>
-                            <a href="http://icdm2016.eurecat.org/">ICDM 2016</a> 
-                            [ <a href="papers/srwrICDM2016.pdf">paper</a> | <a href="papers/srwrICDM2016_supp.pdf">supplement</a> | <a href="https://datalab.snu.ac.kr/srwr/">www (code and data)</a> ] <em3>(19.6% Acceptance Rate)</em3> 
+                            <a href="http://icdm2016.eurecat.org/" class="venue-badge">ICDM 2016</a> <em3>(19.6% Acceptance Rate)</em3>
+                            <div class="pub-links">
+                                <a href="papers/srwrICDM2016.pdf" target="_blank"><i class="fa fa-file-text-o"></i> Paper</a>
+                                <a href="papers/srwrICDM2016_supp.pdf" target="_blank"><i class="fa fa-file-o"></i> Supplement</a>
+                                <a href="https://datalab.snu.ac.kr/srwr/" target="_blank"><i class="fa fa-globe"></i> Website</a>
+                            </div>
                         </div>
                     </article>
 
@@ -404,19 +460,17 @@
     </div>
 </section>
 
+<!-- Back to Top Button -->
+<button class="back-to-top" aria-label="Back to top" title="Back to top">
+    <i class="fa fa-chevron-up"></i>
+</button>
+
 <footer class="footer">
     <div class="copyright-section">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="copytext">&copy; Woojeong Jin, All rights reserved</div>
-                </div>
-            </div>
-            <!--.row-->
+            <div class="copytext">&copy; <script>document.write(new Date().getFullYear())</script> Woojeong Jin</div>
         </div>
-        <!-- .container-fluid -->
     </div>
-    <!-- .copyright-section -->
 </footer>
 <!-- .footer -->
 
@@ -431,9 +485,10 @@
 <script src="js/owl.carousel.min.js"></script>
 <!--theme script-->
 <script src="js/scripts.js"></script>
-<!-- Smooth scrolling -->
+<!-- Theme, Scroll & Navigation Scripts -->
 <script>
 $(document).ready(function(){
+    // Smooth scrolling
     $('a[href^="#"]').on('click', function(e) {
         e.preventDefault();
         var target = this.hash;
@@ -442,6 +497,138 @@ $(document).ready(function(){
                 scrollTop: $(target).offset().top - 70
             }, 500);
         }
+    });
+
+    // Dark mode toggle
+    const themeToggle = document.querySelector('.theme-toggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+    // Check for saved theme preference or use system preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+
+    themeToggle.addEventListener('click', function() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        let newTheme;
+
+        if (currentTheme === 'dark') {
+            newTheme = 'light';
+        } else if (currentTheme === 'light') {
+            newTheme = 'dark';
+        } else {
+            // No explicit theme set, toggle based on system preference
+            newTheme = prefersDark.matches ? 'light' : 'dark';
+        }
+
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+    });
+
+    // Back to top button & Scroll progress
+    const backToTop = document.querySelector('.back-to-top');
+    const scrollProgress = document.querySelector('.scroll-progress');
+
+    window.addEventListener('scroll', function() {
+        // Back to top visibility
+        if (window.pageYOffset > 300) {
+            backToTop.classList.add('visible');
+        } else {
+            backToTop.classList.remove('visible');
+        }
+
+        // Scroll progress bar
+        const scrollTop = window.pageYOffset;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+        scrollProgress.style.width = scrollPercent + '%';
+    });
+
+    backToTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Active nav highlighting
+    const sections = document.querySelectorAll('header[id], section[id]');
+    const navLinks = document.querySelectorAll('.navbar-nav a[href^="#"]');
+
+    function updateActiveNav() {
+        let current = '';
+        const scrollPos = window.pageYOffset + 100;
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', updateActiveNav);
+    updateActiveNav();
+
+    // Scroll animations (Intersection Observer)
+    const fadeInSections = document.querySelectorAll('.fade-in-section');
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
+    fadeInSections.forEach(section => {
+        observer.observe(section);
+    });
+
+    // Staggered publication card animations
+    const pubArticles = document.querySelectorAll('.section-pub article');
+    let visibleCount = 0;
+
+    const cardObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const card = entry.target;
+                const delay = visibleCount * 150; // 150ms between each card
+
+                setTimeout(() => {
+                    card.classList.add('visible');
+                }, delay);
+
+                visibleCount++;
+
+                // Reset counter after a batch
+                setTimeout(() => {
+                    visibleCount = 0;
+                }, 1000);
+
+                cardObserver.unobserve(card);
+            }
+        });
+    }, {
+        root: null,
+        rootMargin: '0px 0px -50px 0px',
+        threshold: 0.2
+    });
+
+    pubArticles.forEach(article => {
+        cardObserver.observe(article);
     });
 });
 </script>
