@@ -363,7 +363,9 @@ strong {
 .header .profile-img {
     margin-right: 40px;
     margin-bottom: 20px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .header .profile-img img.img-circle {
@@ -386,6 +388,7 @@ strong {
     display: flex;
     justify-content: center;
     gap: 2px;
+    width: 150px;
 }
 
 .social-links a {
@@ -1175,17 +1178,22 @@ strong {
 
     /* Timeline mobile adjustments */
     .timeline {
-        padding-left: 20px;
+        padding-left: 24px;
     }
 
     .timeline::before {
-        left: 3px;
+        left: 6px;
     }
 
     .content-item::before {
-        left: -20px;
+        left: -14px;
         width: 10px;
         height: 10px;
+        top: 16px;
+    }
+
+    .content-item:first-child::before {
+        top: 4px;
     }
 
     /* Pub links mobile */
@@ -1221,6 +1229,19 @@ strong {
         right: 20px;
         width: 40px;
         height: 40px;
+    }
+
+    /* Timeline small screen adjustments */
+    .timeline {
+        padding-left: 22px;
+    }
+
+    .timeline::before {
+        left: 5px;
+    }
+
+    .content-item::before {
+        left: -13px;
     }
 }
 
