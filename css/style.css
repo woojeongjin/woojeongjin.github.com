@@ -35,13 +35,18 @@ Author: themehippo.com
 ------------------------------------*/
 
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family : 'Hind', sans-serif;
-    font-size   : 16px;
-    line-height : 1.8em;
-    color       : #0f0f0f;
-    font-weight : 300;
-    background  : #f8f8f8;
+    font-family : -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    font-size   : 15px;
+    line-height : 1.7em;
+    color       : #1d1d1f;
+    font-weight : 400;
+    background  : #fff;
+    padding-top : 52px;
     }
 
 /* --------------------------------------
@@ -92,12 +97,9 @@ h6 {
  * LINK STYLE
  *------------------------------------------*/
 a {
-    color              : #ff5722;
+    color              : #06c;
     text-decoration    : none;
-    -webkit-transition : all 0.3s ease 0s;
-    -moz-transition    : all 0.3s ease 0s;
-    -o-transition      : all 0.3s ease 0s;
-    transition         : all 0.3s ease 0s;
+    transition         : color 0.2s ease;
     }
 
 a,
@@ -111,15 +113,17 @@ a:active {
 a:hover,
 a:focus {
     text-decoration : none;
-    color           : #ff5722;
+    color           : #0056b3;
     }
 
 p {
-    margin-bottom : 20px;
+    margin-bottom : 15px;
+    color: #1d1d1f;
     }
 
 strong {
-    color : #444444;
+    color : #1d1d1f;
+    font-weight: 500;
     }
 
 ul {
@@ -193,18 +197,18 @@ button:focus,
  * Section Wrapper
  *-------------------*/
 .section-wrapper {
-    padding : 30px 0;
+    padding : 50px 0;
     }
 
 @media (max-width : 768px) {
     .section-wrapper {
-        padding : 20px 0;
+        padding : 35px 0;
         }
     }
 
 @media (max-width : 600px){
     .section-wrapper {
-        padding : 20px;
+        padding : 30px 20px;
         }
     }
 /*---------------------------
@@ -214,14 +218,16 @@ button:focus,
     }*/
 
 .section-title h2 {
-    font-size      : 18px;
+    font-size      : 13px;
     margin-bottom  : 20px;
-    color          : #777777;
+    color          : #86868b;
     text-transform : uppercase;
-    text-align   : left;  
-    margin-right : 30px;
+    text-align     : left;
+    margin-right   : 30px;
+    font-weight    : 500;
+    letter-spacing : 0.5px;
     }
-    
+
 
 
 @media (max-width: 768px) {
@@ -229,29 +235,54 @@ button:focus,
         text-align: left;
         }
     .section-title h2{
-        font-size: 18px;
-        margin-bottom: 20px;
+        font-size: 12px;
+        margin-bottom: 15px;
         text-align: left;
         }
     }
     
 /* PUBLICATION */
 .section-pub {
-	color: #666666;
-	line-height : 1.5em;
+	color: #1d1d1f;
+	line-height : 1.6em;
 	}
+
+.year-divider {
+    font-size: 12px;
+    font-weight: 500;
+    color: #86868b;
+    margin: 35px 0 12px 0;
+    letter-spacing: 0.5px;
+    }
+
+.year-divider:first-child {
+    margin-top: 0;
+    }
+
 .section-pub em2 {
-	color: #0f0f0f;
-	text-decoration: underline;
+	color: #1d1d1f;
+	font-style: normal;
 	}
 
 .section-pub em3 {
-    color: #0f0f0f;
+    color: #86868b;
+    font-size: 13px;
     }
 
 .section-pub tr {
     height     : 160px;
     }
+
+.section-pub article {
+    padding: 14px 0;
+    margin-bottom: 0;
+    }
+
+.section-pub article .inner strong {
+    color: #1d1d1f;
+    font-weight: 500;
+    }
+
 
 
 
@@ -285,35 +316,148 @@ button:focus,
 
 
 /*-----------------------------
- * NAVIGATION & HEADER STYLE
+ * NAVIGATION BAR
+ *-----------------------------*/
+
+.navbar-default {
+    background-color: #fff;
+    border: none;
+    border-bottom: 1px solid #f0f0f0;
+    box-shadow: none;
+    margin-bottom: 0;
+    }
+
+.navbar-default .navbar-brand {
+    color: #1d1d1f;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    }
+
+.navbar-default .navbar-brand:hover {
+    color: #1d1d1f;
+    text-decoration: none;
+    }
+
+.navbar-default .navbar-nav > li > a {
+    color: #1d1d1f;
+    font-weight: 400;
+    font-size: 13px;
+    padding: 18px 15px;
+    transition: color 0.2s ease;
+    }
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #06c;
+    background: transparent;
+    text-decoration: none;
+    }
+
+.navbar-toggle {
+    border-color: #d2d2d7;
+    }
+
+.navbar-toggle .icon-bar {
+    background-color: #86868b;
+    }
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 50px;
+        }
+    .navbar-default .navbar-nav > li > a {
+        padding: 12px 15px;
+        }
+    }
+
+/*-----------------------------
+ * HEADER STYLE
  *-----------------------------*/
 
 .header {
-    padding    : 50px 0 50px 0;
+    padding    : 80px 0 60px 0;
     margin     : 0;
     position   : relative;
-    border-top : 5px solid #ff5722;
+    background : #fff;
     }
 
 .header .profile-img {
     margin-right : 30px;
     margin-bottom : 30px;
-    width: 200px;
+    width: 160px;
+    text-align: center;
+    }
+
+.header .profile-img img.img-circle {
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border: none;
+    }
+
+.social-links {
+    margin-top: 20px;
+    }
+
+.social-links a {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    margin: 0 2px;
+    color: #86868b;
+    transition: color 0.2s ease;
+    }
+
+.social-links a:hover {
+    color: #1d1d1f;
+    }
+
+.research-interests {
+    margin-top: 25px;
+    }
+
+.research-interests strong {
+    font-weight: 500;
+    color: #86868b;
+    font-size: 13px;
+    }
+
+.research-interests .tag {
+    display: inline;
+    font-size: 14px;
+    color: #1d1d1f;
+    }
+
+.research-interests .tag::after {
+    content: ", ";
+    }
+
+.research-interests .tag:last-child::after {
+    content: "";
     }
 
 .header .name-wrapper {
-    margin-bottom : 30px;
+    margin-bottom : 25px;
     }
 
 .header .name-wrapper h1 {
-    text-transform : uppercase;
-    line-height    : 1;
-    margin         : 0 0 5px;
+    text-transform : none;
+    line-height    : 1.1;
+    margin         : 0 0 8px;
+    font-size      : 32px;
+    font-weight    : 600;
+    color          : #1d1d1f;
+    letter-spacing : -0.5px;
     }
 
 .header .name-wrapper span {
-    font-size : 24px;
-    color     : #ff5722;
+    font-size : 18px;
+    color     : #86868b;
+    font-weight: 400;
     }
 
 .header .personal-details {
@@ -337,18 +481,27 @@ button:focus,
 
 @media (max-width : 768px) {
     .header {
-        padding    : 20px 0;
+        padding    : 40px 0 30px;
         }
 
     .header .profile-img {
-        margin: 0 0 30px;
-        width: 150px;
+        margin: 0 auto 25px;
+        width: 120px;
+        }
+
+    .header .profile-img img.img-circle {
+        width: 100px;
+        height: 100px;
+        }
+
+    .header .name-wrapper h1 {
+        font-size: 26px;
         }
     }
 
 @media (max-width : 600px){
     .header{
-        padding: 20px;
+        padding: 30px 20px;
         }
     }
 
@@ -706,18 +859,23 @@ button:focus,
     }
 
 .content-item h3 {
-    margin         : 0 0 10px;
-    line-height    : 1;
-    font-weight    : bold;
+    margin         : 0 0 6px;
+    line-height    : 1.4;
+    font-weight    : 500;
+    font-size      : 15px;
+    color          : #1d1d1f;
     }
 
 .content-item h4 {
     margin      : 0;
-    line-height : 1;
+    line-height : 1.4;
+    font-weight : 400;
+    color       : #1d1d1f;
     }
 
 .content-item small {
-    color : #777777;
+    color       : #86868b;
+    font-size   : 13px;
     }
 
 /*-------------------
@@ -768,12 +926,15 @@ button:focus,
 /* Copyright */
 
 .footer {
-    padding : 30px 0;
+    padding : 40px 0;
     text-align : left;
+    border-top: 1px solid #f0f0f0;
+    margin-top: 30px;
     }
 
 .footer .copyright-section {
-    font-size  : 13px;
+    font-size  : 12px;
+    color: #86868b;
     }
 
 .footer .copyright-section .copytext {
@@ -831,14 +992,22 @@ button:focus,
     
 
 .features article {
-	margin-bottom: 1em;
-	padding-top: 1em;
+	margin-bottom: 0;
+	padding-top: 0;
 }
 
 	.features article:first-child {
 		border-top: 0;
 		padding-top: 0;
 	}
+
+/* Work Experience & Education */
+.section-experience .content-item,
+.section-education .content-item {
+    padding: 12px 0;
+    margin-bottom: 0;
+    }
+
 
 	.features article .image {
 		display: inline-block;
