@@ -8,7 +8,7 @@
  * --------------------------------- */
 :root {
     --text-primary: #1d1d1f;
-    --text-secondary: #86868b;
+    --text-secondary: #76767b;
     --text-tertiary: #6e6e73;
     --link-color: #0066cc;
     --link-hover: #0077ed;
@@ -28,7 +28,7 @@
     --radius-full: 100px;
     --transition-fast: 0.2s ease;
     --transition-smooth: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-    --max-width: 980px;
+    --max-width: 920px;
 }
 
 /* ---------------------------------
@@ -212,20 +212,6 @@ strong {
 }
 
 /* ---------------------------------
- * Scroll Progress Bar
- * --------------------------------- */
-.scroll-progress {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-    width: 0%;
-    z-index: 1001;
-    transition: width 0.1s ease-out;
-}
-
-/* ---------------------------------
  * Navigation (Frosted Glass Effect)
  * --------------------------------- */
 .navbar-default {
@@ -321,18 +307,43 @@ strong {
     padding: 50px 0;
 }
 
+.section-wrapper .container {
+    max-width: var(--max-width);
+}
+
+/* Full-width section headings */
+.section-heading {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    color: var(--text-primary);
+    margin: 0 0 22px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.section-inner {
+    max-width: 100%;
+}
+
+.section-education,
+.section-patents {
+    background: var(--bg-primary);
+}
+
+.section-experience,
+.section-pub {
+    background: var(--bg-secondary);
+}
+
+.section-pub.section-patents {
+    background: var(--bg-primary);
+}
+
 /* ---------------------------------
  * Section Titles (Apple style)
  * --------------------------------- */
-.section-title h2 {
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 8px;
-}
-
 /* ---------------------------------
  * Header / Hero Section
  * --------------------------------- */
@@ -443,7 +454,7 @@ strong {
 
 .header .name-wrapper span {
     font-size: 17px;
-    color: var(--text-secondary);
+    color: var(--text-tertiary);
     font-weight: 400;
     letter-spacing: -0.01em;
 }
@@ -503,64 +514,6 @@ strong {
 }
 
 /* ---------------------------------
- * Bento Grid Layout (About Section)
- * --------------------------------- */
-.bento-grid {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 24px;
-    align-items: start;
-}
-
-.bento-card {
-    background: var(--card-bg);
-    border-radius: var(--radius-md);
-    padding: 24px;
-    border: 1px solid var(--border-color);
-    transition: all var(--transition-smooth);
-}
-
-.bento-card:hover {
-    box-shadow: var(--shadow-md);
-}
-
-.bento-card.profile-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 28px 24px;
-}
-
-.bento-card.bio-card {
-    display: flex;
-    flex-direction: column;
-}
-
-.bento-card.bio-card .name-wrapper {
-    margin-bottom: 16px;
-}
-
-.bento-card.bio-card .name-wrapper h1 {
-    font-size: 28px;
-    margin: 0 0 4px;
-}
-
-.bento-card.bio-card .name-wrapper span {
-    font-size: 16px;
-}
-
-.bento-card.bio-card p {
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-
-.bento-card.bio-card .research-interests {
-    margin-top: 16px;
-}
-
-/* ---------------------------------
  * Publication Icon Links
  * --------------------------------- */
 .pub-links {
@@ -597,23 +550,6 @@ strong {
 .section-experience {
     background: var(--bg-secondary);
     padding: 50px 0;
-}
-
-.section-experience .container {
-    max-width: var(--max-width);
-}
-
-.section-experience .row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.section-experience .col-md-3 {
-    flex: 0 0 200px;
-}
-
-.section-experience .col-md-9 {
-    flex: 1;
 }
 
 /* Content Items - Timeline View */
@@ -707,7 +643,7 @@ strong {
 .content-item h4 {
     font-size: 14px;
     font-weight: 400;
-    color: var(--text-secondary);
+    color: var(--text-tertiary);
     margin: 0;
 }
 
@@ -725,50 +661,12 @@ strong {
     padding: 50px 0;
 }
 
-.section-education .container {
-    max-width: var(--max-width);
-}
-
-.section-education .row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.section-education .col-md-3 {
-    flex: 0 0 200px;
-}
-
-.section-education .col-md-9 {
-    flex: 1;
-}
-
-.section-education .col-md-12 {
-    width: 100%;
-}
-
 /* ---------------------------------
  * Publications Section
  * --------------------------------- */
 .section-pub {
     background: var(--bg-secondary);
     padding: 50px 0;
-}
-
-.section-pub .container {
-    max-width: var(--max-width);
-}
-
-.section-pub .row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.section-pub .col-md-3 {
-    flex: 0 0 200px;
-}
-
-.section-pub .col-md-9 {
-    flex: 1;
 }
 
 /* Year Dividers */
@@ -835,16 +733,47 @@ strong {
     margin-bottom: 6px;
 }
 
-.section-pub em2 {
+.me {
     color: var(--text-primary);
-    font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
 }
 
-.section-pub em3 {
+.section-pub .authors {
+    color: var(--text-tertiary);
+}
+
+.pub-note {
     color: var(--text-tertiary);
     font-size: 12px;
-    font-style: normal;
+    margin-left: 4px;
+}
+
+/* Long author lists */
+.authors .authors-full {
+    display: none;
+}
+
+.authors.expanded .authors-full {
+    display: inline;
+}
+
+.authors.expanded .authors-short {
+    display: none;
+}
+
+.authors-toggle {
+    border: none;
+    background: transparent;
+    padding: 0 2px;
+    font: inherit;
+    font-size: 12px;
+    color: var(--link-color);
+    cursor: pointer;
+}
+
+.authors-toggle:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
 }
 
 .section-pub article a {
@@ -997,64 +926,6 @@ strong {
 }
 
 /* ---------------------------------
- * Buttons
- * --------------------------------- */
-.btn {
-    padding: 12px 24px;
-    font-size: 14px;
-    font-weight: 500;
-    border-radius: var(--radius-full);
-    border: none;
-    transition: all var(--transition-fast);
-    cursor: pointer;
-}
-
-.btn-primary {
-    background: var(--link-color);
-    color: #fff;
-}
-
-.btn-primary:hover,
-.btn-primary:focus {
-    background: var(--link-hover);
-    color: #fff;
-}
-
-/* ---------------------------------
- * Preloader
- * --------------------------------- */
-#preloader {
-    background: var(--bg-primary);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#status {
-    width: 40px;
-    height: 40px;
-}
-
-.status-mes {
-    width: 40px;
-    height: 40px;
-    border: 3px solid var(--bg-tertiary);
-    border-top-color: var(--link-color);
-    border-radius: 50%;
-    animation: spin 0.8s linear infinite;
-}
-
-@keyframes spin {
-    to { transform: rotate(360deg); }
-}
-
-/* ---------------------------------
  * Animations (Fade In on Scroll)
  * --------------------------------- */
 @keyframes fadeInUp {
@@ -1081,24 +952,18 @@ strong {
         font-size: 28px;
     }
 
-    .section-experience .col-md-3,
-    .section-education .col-md-3,
-    .section-pub .col-md-3 {
-        flex: 0 0 100%;
-        margin-bottom: 16px;
-    }
-
-    .section-experience .col-md-9,
-    .section-education .col-md-9,
-    .section-pub .col-md-9 {
-        flex: 0 0 100%;
-    }
-}
+        }
 
 @media (max-width: 768px) {
     #main-wrapper {
         padding-top: 50px;
     }
+
+    .section-heading {
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+
 
     .header {
         padding: 40px 0 35px;
@@ -1139,11 +1004,7 @@ strong {
         padding: 35px 0;
     }
 
-    .section-title h2 {
-        text-align: left;
-    }
-
-    .year-divider {
+        .year-divider {
         margin: 24px 0 12px;
     }
 
@@ -1362,54 +1223,6 @@ strong {
 }
 
 /* ---------------------------------
- * Scroll Animations
- * --------------------------------- */
-.fade-in-section {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.fade-in-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Stagger children animation */
-.fade-in-section .content-item,
-.fade-in-section article {
-    opacity: 0;
-    transform: translateY(15px);
-    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
-}
-
-.fade-in-section.visible .content-item,
-.fade-in-section.visible article {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Stagger delay for timeline items */
-.fade-in-section.visible .content-item:nth-child(1) { transition-delay: 0.05s; }
-.fade-in-section.visible .content-item:nth-child(2) { transition-delay: 0.1s; }
-.fade-in-section.visible .content-item:nth-child(3) { transition-delay: 0.15s; }
-.fade-in-section.visible .content-item:nth-child(4) { transition-delay: 0.2s; }
-.fade-in-section.visible .content-item:nth-child(5) { transition-delay: 0.25s; }
-.fade-in-section.visible .content-item:nth-child(6) { transition-delay: 0.3s; }
-
-/* Publication cards - staggered animation */
-.section-pub article {
-    opacity: 0;
-    transform: translateY(40px) scale(0.97);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.section-pub article.visible {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-}
-
-/* ---------------------------------
  * Utility Classes
  * --------------------------------- */
 .img-responsive {
@@ -1427,7 +1240,6 @@ strong {
 @media print {
     .navbar-default,
     .social-links,
-    #preloader,
     .back-to-top,
     .theme-toggle {
         display: none;
@@ -1446,8 +1258,144 @@ strong {
         border: 1px solid #ddd;
     }
 
-    .fade-in-section {
-        opacity: 1;
-        transform: none;
+}
+
+/* ---------------------------------
+ * Experience details
+ * --------------------------------- */
+.content-item .place {
+    font-weight: 400;
+    color: var(--text-secondary);
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.content-item .place::before {
+    content: '·';
+    margin: 0 6px 0 2px;
+}
+
+.content-item p.desc {
+    margin-top: 4px;
+    line-height: 1.55;
+    color: var(--text-tertiary);
+}
+
+.content-item p.desc + p.desc {
+    margin-top: 2px;
+}
+
+/* ---------------------------------
+ * Extra venue badges
+ * --------------------------------- */
+.venue-badge.venue-speech {
+    background: rgba(124, 58, 237, 0.1);
+    color: #6d28d9;
+    border-color: rgba(124, 58, 237, 0.2);
+}
+
+.venue-badge.venue-workshop {
+    background: rgba(0, 102, 204, 0.06);
+    color: #3b6ea8;
+    border-color: rgba(0, 102, 204, 0.15);
+}
+
+.venue-badge.venue-report {
+    background: rgba(134, 134, 139, 0.1);
+    color: var(--text-secondary);
+    border-color: rgba(134, 134, 139, 0.2);
+}
+
+.venue-badge.venue-granted {
+    background: rgba(0, 168, 107, 0.1);
+    color: #00875a;
+    border-color: rgba(0, 168, 107, 0.2);
+}
+
+.venue-badge.venue-pending {
+    background: rgba(0, 102, 204, 0.1);
+    color: #0066cc;
+    border-color: rgba(0, 102, 204, 0.2);
+}
+
+[data-theme="dark"] .venue-badge.venue-speech {
+    background: rgba(167, 139, 250, 0.15);
+    color: #c4b5fd;
+    border-color: rgba(167, 139, 250, 0.25);
+}
+
+[data-theme="dark"] .venue-badge.venue-workshop,
+[data-theme="dark"] .venue-badge.venue-pending {
+    background: rgba(41, 151, 255, 0.15);
+    color: #5eb8ff;
+    border-color: rgba(41, 151, 255, 0.25);
+}
+
+[data-theme="dark"] .venue-badge.venue-granted {
+    background: rgba(52, 211, 153, 0.15);
+    color: #34d399;
+    border-color: rgba(52, 211, 153, 0.25);
+}
+
+/* Badges are labels now, not links */
+.venue-badge {
+    cursor: default;
+}
+
+.venue-badge:hover {
+    transform: none;
+}
+
+/* ---------------------------------
+ * Footer links
+ * --------------------------------- */
+.footer .copytext a {
+    color: var(--text-secondary);
+}
+
+.footer .copytext a:hover {
+    color: var(--link-color);
+}
+
+/* ---------------------------------
+ * Reduced motion
+ * --------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
     }
+
+    .header,
+    .section-wrapper {
+        animation: none;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Phones: location on its own line under the role (placed after the base .place rules so it wins) */
+@media (max-width: 768px) {
+    .content-item .place {
+        display: block;
+        margin-top: 2px;
+    }
+
+    .content-item .place::before {
+        content: none;
+    }
+}
+
+/* Cards on a white section need a visible edge */
+.section-patents article .inner {
+    border-color: var(--border-color);
+}
+
+/* Anchor jumps land below the fixed nav */
+header[id],
+section[id] {
+    scroll-margin-top: 64px;
 }
